@@ -7,23 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E8A33B827B4AAAD00CD4516 /* StoryHeightlight.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E8A33B727B4AAAD00CD4516 /* StoryHeightlight.json */; };
+		0E8A33BA27B4B00E00CD4516 /* Post.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E8A33B927B4B00E00CD4516 /* Post.json */; };
+		0E8A33BC27B4B3D000CD4516 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A33BB27B4B3D000CD4516 /* ModelData.swift */; };
+		0E8A33BE27B4B70200CD4516 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A33BD27B4B70200CD4516 /* Post.swift */; };
 		0EAA19B927B25415007FF418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA19B827B25415007FF418 /* AppDelegate.swift */; };
 		0EAA19BB27B25415007FF418 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA19BA27B25415007FF418 /* SceneDelegate.swift */; };
-		0EAA19BD27B25415007FF418 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA19BC27B25415007FF418 /* ViewController.swift */; };
-		0EAA19C027B25415007FF418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAA19BE27B25415007FF418 /* Main.storyboard */; };
+		0EAA19BD27B25415007FF418 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA19BC27B25415007FF418 /* MainViewController.swift */; };
 		0EAA19C227B25418007FF418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EAA19C127B25418007FF418 /* Assets.xcassets */; };
 		0EAA19C527B25418007FF418 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAA19C327B25418007FF418 /* LaunchScreen.storyboard */; };
+		0EAA19D227B256C7007FF418 /* FakeAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA19D127B256C7007FF418 /* FakeAPIService.swift */; };
+		0EAA19D427B256E3007FF418 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA19D327B256E3007FF418 /* NetworkError.swift */; };
+		0EAA19D827B257FF007FF418 /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA19D727B257FF007FF418 /* PostHeaderCell.swift */; };
+		0EAA19DA27B26056007FF418 /* StoryHighlightsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA19D927B26056007FF418 /* StoryHighlightsCell.swift */; };
+		0EAA19DC27B262CD007FF418 /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA19DB27B262CD007FF418 /* PostImageCell.swift */; };
+		0EAA19DE27B2630D007FF418 /* PostActionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA19DD27B2630D007FF418 /* PostActionsCell.swift */; };
+		0EAA19E027B2632B007FF418 /* PostContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA19DF27B2632B007FF418 /* PostContentCell.swift */; };
+		0EAA19E227B2A599007FF418 /* StoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA19E127B2A599007FF418 /* StoryView.swift */; };
+		0EAA19E627B2B1DB007FF418 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA19E527B2B1DB007FF418 /* UIImageView+Ext.swift */; };
+		0EAA19E827B2C10D007FF418 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA19E727B2C10D007FF418 /* Section.swift */; };
+		0EAA19EA27B2C126007FF418 /* StoryHeightlightSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA19E927B2C126007FF418 /* StoryHeightlightSection.swift */; };
+		0EAA19EC27B2C137007FF418 /* PostSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA19EB27B2C137007FF418 /* PostSection.swift */; };
+		0EAA19EE27B3AD22007FF418 /* UIStackView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA19ED27B3AD22007FF418 /* UIStackView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E8A33B727B4AAAD00CD4516 /* StoryHeightlight.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StoryHeightlight.json; sourceTree = "<group>"; };
+		0E8A33B927B4B00E00CD4516 /* Post.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Post.json; sourceTree = "<group>"; };
+		0E8A33BB27B4B3D000CD4516 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		0E8A33BD27B4B70200CD4516 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0EAA19B527B25415007FF418 /* FakeInstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FakeInstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EAA19B827B25415007FF418 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EAA19BA27B25415007FF418 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0EAA19BC27B25415007FF418 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0EAA19BF27B25415007FF418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0EAA19BC27B25415007FF418 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0EAA19C127B25418007FF418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EAA19C427B25418007FF418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EAA19C627B25418007FF418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EAA19D127B256C7007FF418 /* FakeAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAPIService.swift; sourceTree = "<group>"; };
+		0EAA19D327B256E3007FF418 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		0EAA19D727B257FF007FF418 /* PostHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeaderCell.swift; sourceTree = "<group>"; };
+		0EAA19D927B26056007FF418 /* StoryHighlightsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHighlightsCell.swift; sourceTree = "<group>"; };
+		0EAA19DB27B262CD007FF418 /* PostImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCell.swift; sourceTree = "<group>"; };
+		0EAA19DD27B2630D007FF418 /* PostActionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostActionsCell.swift; sourceTree = "<group>"; };
+		0EAA19DF27B2632B007FF418 /* PostContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContentCell.swift; sourceTree = "<group>"; };
+		0EAA19E127B2A599007FF418 /* StoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryView.swift; sourceTree = "<group>"; };
+		0EAA19E527B2B1DB007FF418 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		0EAA19E727B2C10D007FF418 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		0EAA19E927B2C126007FF418 /* StoryHeightlightSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryHeightlightSection.swift; sourceTree = "<group>"; };
+		0EAA19EB27B2C137007FF418 /* PostSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSection.swift; sourceTree = "<group>"; };
+		0EAA19ED27B3AD22007FF418 /* UIStackView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +88,103 @@
 		0EAA19B727B25415007FF418 /* FakeInstagram */ = {
 			isa = PBXGroup;
 			children = (
+				0EAA19CF27B2560F007FF418 /* Features */,
+				0EAA19CD27B255E6007FF418 /* Resources */,
+				0EAA19CC27B255D0007FF418 /* Infrastructure */,
+			);
+			path = FakeInstagram;
+			sourceTree = "<group>";
+		};
+		0EAA19CC27B255D0007FF418 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				0EAA19E427B2B1D2007FF418 /* Extension */,
 				0EAA19B827B25415007FF418 /* AppDelegate.swift */,
 				0EAA19BA27B25415007FF418 /* SceneDelegate.swift */,
-				0EAA19BC27B25415007FF418 /* ViewController.swift */,
-				0EAA19BE27B25415007FF418 /* Main.storyboard */,
+				0EAA19D027B25683007FF418 /* DataSource */,
+				0EAA19CE27B255FD007FF418 /* Networking */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		0EAA19CD27B255E6007FF418 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				0EAA19C127B25418007FF418 /* Assets.xcassets */,
 				0EAA19C327B25418007FF418 /* LaunchScreen.storyboard */,
 				0EAA19C627B25418007FF418 /* Info.plist */,
+				0E8A33B727B4AAAD00CD4516 /* StoryHeightlight.json */,
+				0E8A33B927B4B00E00CD4516 /* Post.json */,
 			);
-			path = FakeInstagram;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0EAA19CE27B255FD007FF418 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0EAA19D127B256C7007FF418 /* FakeAPIService.swift */,
+				0EAA19D327B256E3007FF418 /* NetworkError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		0EAA19CF27B2560F007FF418 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				0EAA19BC27B25415007FF418 /* MainViewController.swift */,
+				0EAA19E327B2A5A1007FF418 /* UIView */,
+				0EAA19D627B257CC007FF418 /* TableView Cells */,
+				0EAA19D527B25743007FF418 /* Model */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		0EAA19D027B25683007FF418 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				0E8A33BB27B4B3D000CD4516 /* ModelData.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		0EAA19D527B25743007FF418 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0EAA19E727B2C10D007FF418 /* Section.swift */,
+				0EAA19E927B2C126007FF418 /* StoryHeightlightSection.swift */,
+				0EAA19EB27B2C137007FF418 /* PostSection.swift */,
+				0E8A33BD27B4B70200CD4516 /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0EAA19D627B257CC007FF418 /* TableView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0EAA19D927B26056007FF418 /* StoryHighlightsCell.swift */,
+				0EAA19D727B257FF007FF418 /* PostHeaderCell.swift */,
+				0EAA19DB27B262CD007FF418 /* PostImageCell.swift */,
+				0EAA19DD27B2630D007FF418 /* PostActionsCell.swift */,
+				0EAA19DF27B2632B007FF418 /* PostContentCell.swift */,
+			);
+			path = "TableView Cells";
+			sourceTree = "<group>";
+		};
+		0EAA19E327B2A5A1007FF418 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				0EAA19E127B2A599007FF418 /* StoryView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		0EAA19E427B2B1D2007FF418 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0EAA19E527B2B1DB007FF418 /* UIImageView+Ext.swift */,
+				0EAA19ED27B3AD22007FF418 /* UIStackView+Ext.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +246,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EAA19C527B25418007FF418 /* LaunchScreen.storyboard in Resources */,
+				0E8A33B827B4AAAD00CD4516 /* StoryHeightlight.json in Resources */,
 				0EAA19C227B25418007FF418 /* Assets.xcassets in Resources */,
-				0EAA19C027B25415007FF418 /* Main.storyboard in Resources */,
+				0E8A33BA27B4B00E00CD4516 /* Post.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +259,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EAA19BD27B25415007FF418 /* ViewController.swift in Sources */,
+				0E8A33BC27B4B3D000CD4516 /* ModelData.swift in Sources */,
+				0EAA19E627B2B1DB007FF418 /* UIImageView+Ext.swift in Sources */,
+				0EAA19E227B2A599007FF418 /* StoryView.swift in Sources */,
+				0EAA19DA27B26056007FF418 /* StoryHighlightsCell.swift in Sources */,
+				0EAA19BD27B25415007FF418 /* MainViewController.swift in Sources */,
+				0EAA19D227B256C7007FF418 /* FakeAPIService.swift in Sources */,
+				0EAA19E027B2632B007FF418 /* PostContentCell.swift in Sources */,
+				0EAA19DC27B262CD007FF418 /* PostImageCell.swift in Sources */,
+				0EAA19E827B2C10D007FF418 /* Section.swift in Sources */,
 				0EAA19B927B25415007FF418 /* AppDelegate.swift in Sources */,
 				0EAA19BB27B25415007FF418 /* SceneDelegate.swift in Sources */,
+				0EAA19D827B257FF007FF418 /* PostHeaderCell.swift in Sources */,
+				0EAA19EE27B3AD22007FF418 /* UIStackView+Ext.swift in Sources */,
+				0EAA19EA27B2C126007FF418 /* StoryHeightlightSection.swift in Sources */,
+				0EAA19EC27B2C137007FF418 /* PostSection.swift in Sources */,
+				0E8A33BE27B4B70200CD4516 /* Post.swift in Sources */,
+				0EAA19DE27B2630D007FF418 /* PostActionsCell.swift in Sources */,
+				0EAA19D427B256E3007FF418 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0EAA19BE27B25415007FF418 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0EAA19BF27B25415007FF418 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0EAA19C327B25418007FF418 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,10 +419,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B92JLVTB27;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FakeInstagram/Info.plist;
+				INFOPLIST_FILE = FakeInstagram/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -319,10 +446,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B92JLVTB27;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FakeInstagram/Info.plist;
+				INFOPLIST_FILE = FakeInstagram/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
