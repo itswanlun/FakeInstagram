@@ -1,46 +1,75 @@
 import Foundation
 
 struct PostSection: Section {
+    let identifier = UUID()
     let type = SectionType.post
-    var items = [RowItem]()
+    
+    var rows = [Row]()
 }
 
-struct PostHeaderItem: RowItem {
+struct PostHeaderItem: Row {
+    let sectionIdentifier: UUID
     let type = RowType.header
     let title: String
     let url: URL
     
-    init(title: String, url: URL) {
+    init(sectionIdentifier: UUID, title: String, url: URL) {
+        self.sectionIdentifier = sectionIdentifier
         self.title = title
         self.url = url
     }
 }
 
-struct PostImageItem: RowItem {
+struct PostImageItem: Row {
+    let sectionIdentifier: UUID
     let type = RowType.image
     let url: URL
     
-    init(url: URL) {
+    init(sectionIdentifier: UUID, url: URL) {
+        self.sectionIdentifier = sectionIdentifier
         self.url = url
     }
 }
 
-struct PostActionsItem: RowItem {
-    let type = RowType.action
-    let likeButtonStatus: Bool
+struct PostImageCarouselItem: Row {
+    let sectionIdentifier: UUID
+    let type = RowType.imageCarousel
+    let imageURLs: [URL]
+    var page: Int
     
-    init(likeButtonStatus: Bool) {
-        self.likeButtonStatus = likeButtonStatus
+    init(sectionIdentifier: UUID, imageURLs: [URL], page: Int) {
+        self.sectionIdentifier = sectionIdentifier
+        self.imageURLs = imageURLs
+        self.page = page
     }
 }
 
-struct PostContentItem: RowItem {
+struct PostActionsItem: Row {
+    let sectionIdentifier: UUID
+    let type = RowType.action
+    let likeButtonStatus: Bool
+    let id: Int
+    var page: Int
+    let totalPage: Int
+    
+    init(sectionIdentifier: UUID, likeButtonStatus: Bool, id: Int, page: Int, totalPage: Int) {
+        self.sectionIdentifier = sectionIdentifier
+        self.likeButtonStatus = likeButtonStatus
+        self.id = id
+        self.page = page
+        self.totalPage = totalPage
+    }
+}
+
+struct PostContentItem: Row {
+    let sectionIdentifier: UUID
     let type = RowType.content
     let likeCount: Int
     let account: String
     let content: String
     
-    init(likeCount: Int, account: String, content: String) {
+    init(sectionIdentifier: UUID, likeCount: Int, account: String, content: String) {
+        self.sectionIdentifier = sectionIdentifier
         self.likeCount = likeCount
         self.account = account
         self.content = content

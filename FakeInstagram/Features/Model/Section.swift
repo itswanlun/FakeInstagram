@@ -1,25 +1,24 @@
 import Foundation
 
+enum SectionType {
+    case post
+}
+
 enum RowType {
-    // storyHeightlights
-    case story
-    // post
     case header
     case image
+    case imageCarousel
     case action
     case content
 }
 
-enum SectionType {
-    case storyHeightlights
-    case post
-}
-
 protocol Section {
+    var identifier: UUID { get }
     var type: SectionType { get }
-    var items: [RowItem] { get }
+    var rows: [Row] { get set }
 }
 
-protocol RowItem {
+protocol Row {
+    var sectionIdentifier: UUID { get }
     var type: RowType { get }
 }

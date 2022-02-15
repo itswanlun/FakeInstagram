@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 class PostImageCell: UITableViewCell {
-    var item: RowItem? {
+    var item: Row? {
         didSet {
             guard let item = item as? PostImageItem else {
                 return
@@ -37,6 +37,8 @@ class PostImageCell: UITableViewCell {
 
 private extension PostImageCell {
     func setupUI() {
+        selectionStyle = .none
+        
         contentView.addSubview(postImageView)
         
         NSLayoutConstraint.activate([

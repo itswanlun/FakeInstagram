@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 class PostHeaderCell: UITableViewCell {
-    var item: RowItem? {
+    var item: Row? {
         didSet {
             guard let item = item as? PostHeaderItem else {
                 return
@@ -17,7 +17,6 @@ class PostHeaderCell: UITableViewCell {
         storyButton.translatesAutoresizingMaskIntoConstraints = false
         storyButton.clipsToBounds = true
         storyButton.imageView?.contentMode = .scaleAspectFill
-//        storyButton.contentMode = .scaleAspectFit
         return storyButton
     }()
     
@@ -46,6 +45,8 @@ class PostHeaderCell: UITableViewCell {
 
 private extension PostHeaderCell {
     func setupUI() {
+        selectionStyle = .none
+        
         contentView.addSubview(titleLabel)
         contentView.addSubview(storyButton)
         

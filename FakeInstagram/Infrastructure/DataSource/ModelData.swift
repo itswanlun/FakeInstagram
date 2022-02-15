@@ -1,7 +1,12 @@
 import Foundation
 
 let storyData: StoryResult = load("StoryHeightlight.json")
-let postData: PostResult = load("Post.json")
+
+let post1Data: PostResult = load("Post1.json")
+let post2Data: PostResult = load("Post2.json")
+let post3Data: PostResult = load("Post3.json")
+let post4Data: PostResult = load("Post4.json")
+let post5Data: PostResult = load("Post5.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

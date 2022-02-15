@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 class PostContentCell: UITableViewCell {
-    var item: RowItem? {
+    var item: Row? {
         didSet {
             guard let item = item as? PostContentItem  else {
                 return
@@ -57,6 +57,8 @@ class PostContentCell: UITableViewCell {
 
 private extension PostContentCell {
     func setupUI() {
+        selectionStyle = .none
+        
         contentView.addSubview(likeCountTitle)
         contentView.addSubview(contentLabel)
         
