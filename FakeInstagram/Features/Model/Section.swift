@@ -2,6 +2,7 @@ import Foundation
 
 enum SectionType {
     case post
+    case recommend
 }
 
 enum RowType {
@@ -10,6 +11,7 @@ enum RowType {
     case imageCarousel
     case action
     case content
+    case account
 }
 
 protocol Section {

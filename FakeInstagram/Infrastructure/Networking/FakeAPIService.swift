@@ -13,6 +13,14 @@ class FakeAPIService {
         }
     }
     
+    func getRecommendHeightlight(completionHandler: @escaping (Result<[RecommendItem], NetworkError>) -> Void) {
+        DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
+            DispatchQueue.main.async {
+                completionHandler(Result.success(recommendData.data))
+            }
+        }
+    }
+    
     func getPost(page: Int, completionHandler: @escaping (Result<[PostItem], NetworkError>) -> Void) {
         DispatchQueue.global().asyncAfter(deadline: .now() + 1) { [weak self] in
             guard let self = self else { return }

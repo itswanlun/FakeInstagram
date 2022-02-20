@@ -2,20 +2,35 @@ import Foundation
 
 class MainViewModel {
     // MARK: - Properties
+    let group = DispatchGroup()
+    
     private(set) var data = [Section]()
+    private(set) var recommendData = [RecommendItem]()
+    private(set) var postData = [PostItem]()
+    
     private(set) var page: Int = 1
     private(set) var storyHightlightData = [StoryItem]()
+    private(set) var recommendHightlightData = [RecommendItem]()
     private(set) var isLoadingMore: Bool = false {
-        didSet{
+        didSet {
             isLoadingClosure?(isLoadingMore)
         }
     }
     
+    var isNoResult: Bool = false {
+        didSet {
+            isNoResultClosure?(isNoResult)
+        }
+    }
+    
     // MARK: - Closure
+    var viewStateChageClosure: ((ViewState) -> Void)?
     var dataChangeClosure: (() -> Void)?
+    var partDataChangeClosure: (([IndexPath]) -> Void)?
+    var loadMoreDataChangeClosure: (([Int]) -> Void)?
     var headerChangeClosure: (([StoryItem]) -> Void)?
     var isLoadingClosure: ((Bool) -> Void)?
-    var partDataChangeClosure: (([IndexPath]) -> Void)?
+    var isNoResultClosure: ((Bool) -> Void)?
     
     private func parseItem(indexPath: IndexPath) -> Row {
         return data[indexPath.section].rows[indexPath.row]
@@ -30,7 +45,7 @@ class MainViewModel {
 extension MainViewModel {
     func refresh() {
         page = 1
-        loadPostData(isRefresh: true)
+        loadData()
     }
     
     func loadNextPageIfNeed(section: Int) {
@@ -38,7 +53,7 @@ extension MainViewModel {
         
         if (section > triggerRow) && !isLoadingMore {
             page += 1
-            loadPostData()
+            loadPostData(isKeepLoadingData: true)
         }
     }
     
@@ -82,21 +97,70 @@ extension MainViewModel {
 
 // MARK: - Load Data
 extension MainViewModel {
+    func loadData() {
+        loadStoryHightlightsData()
+        loadRecommendHightlightsData()
+        loadPostData()
+        
+        group.notify(queue: DispatchQueue.global()) { [weak self] in
+            guard let self = self else { return }
+            
+            if !self.recommendData.isEmpty && !self.postData.isEmpty && !self.storyHightlightData.isEmpty {
+                let recommandIndex = 5
+                
+                var tempData = [Section]()
+                for post in self.postData {
+                    tempData.append(self.generatePostSection(item: post))
+                }
+                
+                tempData.insert(self.generateRecommendSection(item: self.recommendData), at: recommandIndex)
+                
+                self.data = tempData
+                self.dataChangeClosure?()
+                self.headerChangeClosure?(self.storyHightlightData)
+                
+                self.viewStateChageClosure?(.success)
+            } else {
+                self.viewStateChageClosure?(.error)
+            }
+        }
+    }
+    
     func loadStoryHightlightsData() {
+        group.enter()
         FakeAPIService.shared.getStoryHeightlight { [weak self] result in
             guard let self = self else { return }
             
             switch result {
             case .success(let story):
                 self.storyHightlightData = story
-                self.headerChangeClosure?(story)
             case .failure:
-                print("error") // TODO: Error handling
+                self.storyHightlightData = []
             }
+            self.group.leave()
         }
     }
     
-    func loadPostData(isRefresh: Bool = false) {
+    func loadRecommendHightlightsData() {
+        group.enter()
+        FakeAPIService.shared.getRecommendHeightlight { [weak self] result in
+            guard let self = self else { return }
+
+            switch result {
+            case .success(let recommend):
+                self.recommendData = recommend
+            case .failure:
+                self.recommendData = []
+            }
+            self.group.leave()
+        }
+    }
+    
+    func loadPostData(isKeepLoadingData: Bool = false) {
+        if !isKeepLoadingData {
+            group.enter()
+        }
+        
         isLoadingMore = true
         
         FakeAPIService.shared.getPost(page: page) { [weak self] result in
@@ -106,19 +170,26 @@ extension MainViewModel {
             
             switch result {
             case .success(let post):
-                guard !post.isEmpty else { return }
+                guard !post.isEmpty else {
+                    self.isNoResult = true
+                    return
+                }
                 
-                if isRefresh {
-                    self.data = post.map { self.generatePostSection(item: $0) }
-                } else {
+                self.postData = post
+                if isKeepLoadingData {
+                    let start = self.data.count
+                    let end = self.data.count + post.count
                     for postData in post {
                         self.data.append(self.generatePostSection(item: postData))
                     }
+                    self.loadMoreDataChangeClosure?(Array(start..<end))
                 }
-                
-                self.dataChangeClosure?()
             case .failure:
-                print("error") // TODO: Error handling
+                self.postData = []
+            }
+            
+            if !isKeepLoadingData {
+                self.group.leave()
             }
         }
     }
@@ -136,6 +207,13 @@ extension MainViewModel {
         
         section.rows.append(item.asPostActionsItemWith(section))
         section.rows.append(item.asPostContentItemWith(section))
+        
+        return section
+    }
+    
+    private func generateRecommendSection(item: [RecommendItem]) -> Section {
+        var section = RecommendSection()
+        section.rows.append(RecommendListItem(sectionIdentifier: section.identifier, data: item))
         
         return section
     }

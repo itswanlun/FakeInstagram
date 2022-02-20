@@ -19,6 +19,13 @@
 		0E8A33D027B655BF00CD4516 /* Post5.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E8A33CF27B655BF00CD4516 /* Post5.json */; };
 		0E8A33F527B90CE300CD4516 /* PostImageCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A33F427B90CE300CD4516 /* PostImageCarouselCell.swift */; };
 		0E8A33FA27BBE05600CD4516 /* MainViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A33F927BBE05600CD4516 /* MainViewController+TableView.swift */; };
+		0E8A33FC27BD1E1E00CD4516 /* RecommendHightlightsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A33FB27BD1E1E00CD4516 /* RecommendHightlightsCell.swift */; };
+		0E8A33FE27BD214D00CD4516 /* RecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A33FD27BD214D00CD4516 /* RecommendView.swift */; };
+		0E8A340027BD464200CD4516 /* RecommendHeightlight.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E8A33FF27BD464200CD4516 /* RecommendHeightlight.json */; };
+		0E8A340227BD46EF00CD4516 /* RecommendResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A340127BD46EF00CD4516 /* RecommendResult.swift */; };
+		0E8A340427BD538800CD4516 /* RecommedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A340327BD538800CD4516 /* RecommedSection.swift */; };
+		0E8A340627BE41E000CD4516 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A340527BE41E000CD4516 /* Color+Ext.swift */; };
+		0E8A340927BFF24D00CD4516 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8A340827BFF24D00CD4516 /* ErrorView.swift */; };
 		0EAA19B927B25415007FF418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA19B827B25415007FF418 /* AppDelegate.swift */; };
 		0EAA19BB27B25415007FF418 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA19BA27B25415007FF418 /* SceneDelegate.swift */; };
 		0EAA19BD27B25415007FF418 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA19BC27B25415007FF418 /* MainViewController.swift */; };
@@ -51,6 +58,13 @@
 		0E8A33CF27B655BF00CD4516 /* Post5.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Post5.json; sourceTree = "<group>"; };
 		0E8A33F427B90CE300CD4516 /* PostImageCarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCarouselCell.swift; sourceTree = "<group>"; };
 		0E8A33F927BBE05600CD4516 /* MainViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+TableView.swift"; sourceTree = "<group>"; };
+		0E8A33FB27BD1E1E00CD4516 /* RecommendHightlightsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendHightlightsCell.swift; sourceTree = "<group>"; };
+		0E8A33FD27BD214D00CD4516 /* RecommendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendView.swift; sourceTree = "<group>"; };
+		0E8A33FF27BD464200CD4516 /* RecommendHeightlight.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RecommendHeightlight.json; sourceTree = "<group>"; };
+		0E8A340127BD46EF00CD4516 /* RecommendResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendResult.swift; sourceTree = "<group>"; };
+		0E8A340327BD538800CD4516 /* RecommedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommedSection.swift; sourceTree = "<group>"; };
+		0E8A340527BE41E000CD4516 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		0E8A340827BFF24D00CD4516 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		0EAA19B527B25415007FF418 /* FakeInstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FakeInstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EAA19B827B25415007FF418 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EAA19BA27B25415007FF418 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,8 +102,17 @@
 			children = (
 				0EAA19E927B2C126007FF418 /* StoryResult.swift */,
 				0E8A33BD27B4B70200CD4516 /* PostResult.swift */,
+				0E8A340127BD46EF00CD4516 /* RecommendResult.swift */,
 			);
 			path = Codable;
+			sourceTree = "<group>";
+		};
+		0E8A340727BFF1D500CD4516 /* ErrorView */ = {
+			isa = PBXGroup;
+			children = (
+				0E8A340827BFF24D00CD4516 /* ErrorView.swift */,
+			);
+			path = ErrorView;
 			sourceTree = "<group>";
 		};
 		0EAA19AC27B25415007FF418 = {
@@ -142,6 +165,7 @@
 				0E8A33CB27B6558400CD4516 /* Post3.json */,
 				0E8A33CD27B655A600CD4516 /* Post4.json */,
 				0E8A33CF27B655BF00CD4516 /* Post5.json */,
+				0E8A33FF27BD464200CD4516 /* RecommendHeightlight.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -158,6 +182,7 @@
 		0EAA19CF27B2560F007FF418 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				0E8A340727BFF1D500CD4516 /* ErrorView */,
 				0EAA19BC27B25415007FF418 /* MainViewController.swift */,
 				0E8A33F927BBE05600CD4516 /* MainViewController+TableView.swift */,
 				0E8A33C127B4F41200CD4516 /* MainViewModel.swift */,
@@ -182,6 +207,7 @@
 				0E8A33F627B9146D00CD4516 /* Codable */,
 				0EAA19E727B2C10D007FF418 /* Section.swift */,
 				0EAA19EB27B2C137007FF418 /* PostSection.swift */,
+				0E8A340327BD538800CD4516 /* RecommedSection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -189,6 +215,7 @@
 		0EAA19D627B257CC007FF418 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				0E8A33FB27BD1E1E00CD4516 /* RecommendHightlightsCell.swift */,
 				0EAA19D727B257FF007FF418 /* PostHeaderCell.swift */,
 				0EAA19DB27B262CD007FF418 /* PostImageCell.swift */,
 				0EAA19DD27B2630D007FF418 /* PostActionsCell.swift */,
@@ -203,6 +230,7 @@
 			children = (
 				0EAA19E127B2A599007FF418 /* StoryView.swift */,
 				0E8A33C527B52BB600CD4516 /* StoryHightlightsView.swift */,
+				0E8A33FD27BD214D00CD4516 /* RecommendView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +240,7 @@
 			children = (
 				0EAA19E527B2B1DB007FF418 /* UIImageView+Ext.swift */,
 				0EAA19ED27B3AD22007FF418 /* UIStackView+Ext.swift */,
+				0E8A340527BE41E000CD4516 /* Color+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -274,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E8A340027BD464200CD4516 /* RecommendHeightlight.json in Resources */,
 				0EAA19C527B25418007FF418 /* LaunchScreen.storyboard in Resources */,
 				0E8A33B827B4AAAD00CD4516 /* StoryHeightlight.json in Resources */,
 				0EAA19C227B25418007FF418 /* Assets.xcassets in Resources */,
@@ -297,6 +327,10 @@
 				0EAA19E227B2A599007FF418 /* StoryView.swift in Sources */,
 				0EAA19BD27B25415007FF418 /* MainViewController.swift in Sources */,
 				0E8A33F527B90CE300CD4516 /* PostImageCarouselCell.swift in Sources */,
+				0E8A33FC27BD1E1E00CD4516 /* RecommendHightlightsCell.swift in Sources */,
+				0E8A33FE27BD214D00CD4516 /* RecommendView.swift in Sources */,
+				0E8A340927BFF24D00CD4516 /* ErrorView.swift in Sources */,
+				0E8A340427BD538800CD4516 /* RecommedSection.swift in Sources */,
 				0EAA19D227B256C7007FF418 /* FakeAPIService.swift in Sources */,
 				0EAA19E027B2632B007FF418 /* PostContentCell.swift in Sources */,
 				0EAA19DC27B262CD007FF418 /* PostImageCell.swift in Sources */,
@@ -306,7 +340,9 @@
 				0EAA19BB27B25415007FF418 /* SceneDelegate.swift in Sources */,
 				0EAA19D827B257FF007FF418 /* PostHeaderCell.swift in Sources */,
 				0EAA19EE27B3AD22007FF418 /* UIStackView+Ext.swift in Sources */,
+				0E8A340627BE41E000CD4516 /* Color+Ext.swift in Sources */,
 				0E8A33C227B4F41200CD4516 /* MainViewModel.swift in Sources */,
+				0E8A340227BD46EF00CD4516 /* RecommendResult.swift in Sources */,
 				0EAA19EA27B2C126007FF418 /* StoryResult.swift in Sources */,
 				0E8A33FA27BBE05600CD4516 /* MainViewController+TableView.swift in Sources */,
 				0EAA19EC27B2C137007FF418 /* PostSection.swift in Sources */,

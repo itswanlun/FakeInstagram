@@ -1,6 +1,7 @@
 import Foundation
 
 let storyData: StoryResult = load("StoryHeightlight.json")
+let recommendData: RecommendResult = load("RecommendHeightlight.json")
 
 let post1Data: PostResult = load("Post1.json")
 let post2Data: PostResult = load("Post2.json")

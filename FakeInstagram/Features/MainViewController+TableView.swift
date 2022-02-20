@@ -24,9 +24,20 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         let item = section.rows[indexPath.row]
         
         switch section.type {
+        case .recommend:
+            return recommendCellConfiguConfiguration(tableView, indexPath: indexPath, item: item)
         case .post:
             return postCellConfiguration(tableView, indexPath: indexPath, item: item)
         }
+    }
+    
+    func recommendCellConfiguConfiguration(_ tableView: UITableView, indexPath: IndexPath, item: Row) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RecommendHightlightsCell.self), for: indexPath) as? RecommendHightlightsCell else {
+            return UITableViewCell()
+        }
+        
+        cell.item = item
+        return cell
     }
     
     func postCellConfiguration(_ tableView: UITableView, indexPath: IndexPath, item: Row) -> UITableViewCell {
@@ -70,6 +81,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             
             cell.item = item
             return cell
+        default:
+            return UITableViewCell()
         }
     }
     
