@@ -4,15 +4,11 @@ Instagram是現今大家常使用的社交軟體，也是我最想要練習的AP
 
 ## 仿Instagram設計方向
 
----
-
 1. Infinite scroll 捲軸瀏覽至底載入新資料，直到 API 沒有資料
 2. Pull-to-refresh下拉更新圖片
 3. Error handling 呈現 retry 頁面
 
 ## 使用技術
-
----
 
 在這個作品裡我想練習的部分有以下：
 
